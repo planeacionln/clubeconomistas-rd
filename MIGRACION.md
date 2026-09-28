@@ -2,7 +2,7 @@
 
 Documento de traspaso del repositorio `planeacionln/clubeconomistas-rd`. Acompaña al
 archivo **`clubeconomistas-rd.bundle`**, que contiene el repositorio **completo**: los
-60 commits y las 7 ramas.
+61 commits y las 7 ramas.
 
 ## 1. Qué contiene el bundle
 
@@ -22,8 +22,9 @@ conservar, migra todas las ramas (paso 3), no solo `main`.
 ## 2. Verificar la integridad
 
 ```bash
-git bundle verify clubeconomistas-rd.bundle
 sha256sum clubeconomistas-rd.bundle   # compárala con la de clubeconomistas-rd.bundle.sha256
+# git bundle verify debe ejecutarse dentro de un repositorio git (por ejemplo, tras el paso 3a):
+git -C clubeconomistas-rd bundle verify ../clubeconomistas-rd.bundle
 ```
 
 ## 3. Restaurar en un repositorio nuevo
